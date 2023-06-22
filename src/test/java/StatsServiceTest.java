@@ -1,3 +1,4 @@
+import org.example.StatsService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -6,7 +7,7 @@ public class StatsServiceTest {
     @Test
 
     public void sumTest() {
-        StatsServiceTest service = new StatsServiceTest();
+        StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int actual = service.sum(sales);
@@ -18,7 +19,7 @@ public class StatsServiceTest {
     @Test
 
     public void averageTest() {
-        StatsServiceTest service = new StatsServiceTest();
+        StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int actual = service.average(sales);
@@ -30,7 +31,7 @@ public class StatsServiceTest {
     @Test
 
     public void maxMonthTest() {
-        StatsServiceTest service = new StatsServiceTest();
+        StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int actual = service.maxMonthSales(sales);
@@ -42,7 +43,7 @@ public class StatsServiceTest {
     @Test
 
     public void minMonthTest() {
-        StatsServiceTest service = new StatsServiceTest();
+        StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int actual = service.minMonthSales(sales);
@@ -54,7 +55,7 @@ public class StatsServiceTest {
     @Test
 
     public void monthBelowAverage() {
-        StatsServiceTest service = new StatsServiceTest();
+        StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int actual = service.monthAboveAverage(sales);
@@ -66,11 +67,11 @@ public class StatsServiceTest {
     @Test
 
     public void monthAboveAverage() {
-        StatsServiceTest service = new StatsServiceTest();
+        StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int actual = service.monthAboveAverage(sales);
-        int expected = 6;
+        int expected = 5;
 
         Assertions.assertEquals(actual, expected);
     }
