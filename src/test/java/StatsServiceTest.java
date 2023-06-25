@@ -23,7 +23,7 @@ public class StatsServiceTest {
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int actual = service.average(sales);
-        int expected = 180/12;
+        int expected = 180 / 12;
 
         Assertions.assertEquals(actual, expected);
     }

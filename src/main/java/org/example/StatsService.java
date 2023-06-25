@@ -32,15 +32,16 @@ public class StatsService {
                 monthMin = i;
             }
         }
-        return  monthMin + 1;
+        return monthMin + 1;
     }
 
     public int monthBelowAverage(int[] sales) {
-        
+
         int counter = 0;
+        int averageSale = average(sales);
 
         for (int sale : sales) {
-            if(sale < average(sales)) {
+            if (sale < averageSale) {
                 counter++;
             }
         }
@@ -50,9 +51,10 @@ public class StatsService {
     public int monthAboveAverage(int[] sales) {
 
         int counter = 0;
+        int averageSale = average(sales);
 
         for (int sale : sales) {
-            if(sale > average(sales)) {
+            if (sale > averageSale) {
                 counter++;
             }
         }
